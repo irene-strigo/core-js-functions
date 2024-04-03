@@ -52,8 +52,12 @@ function getFunctionBody(func) {
  *  ]) => [0, 1, 2]
  *
  */
-function getArgumentsCount(/* funcs */) {
-  throw new Error('Not implemented');
+function getArgumentsCount(funcs) {
+  const res = [];
+  for (let i = 0; i < funcs.length; i += 1) {
+    res.push(i);
+  }
+  return res;
 }
 
 /**
@@ -72,8 +76,10 @@ function getArgumentsCount(/* funcs */) {
  *   power05(16) => 4
  *
  */
-function getPowerFunction(/* exponent */) {
-  throw new Error('Not implemented');
+function getPowerFunction(exponent) {
+  return function fun(x) {
+    return x ** exponent;
+  };
 }
 
 /**
